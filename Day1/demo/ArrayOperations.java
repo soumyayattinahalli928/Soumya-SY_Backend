@@ -190,76 +190,132 @@ public class ArrayOperations {
 		}
 		return min;
 	}
-	public static void unionArray(int arr1[], int arr2[]) {
-		
-		int count=0;
-			
-//		 arr3 = mergeArray(arr1, arr2);
-//		int[] sort = new int[arr3.length];
-//		sort = sortArray(arr3);
-//		System.out.println(Arrays.toString(sort));
-		
+	public static void unionArray(int arr1[],int arr2[])
+	{
 		int[] arr3 = new int[arr1.length+arr2.length];
-		for(int i=0;i<arr3.length;i++) {
-			for(int j=i;j<arr3.length;j++) {
+		int j=0,i=0,k=0; 
+		while(i<arr1.length && j<arr2.length)
+		{
+			if(arr1[i]==arr2[j])
+			{
+				arr3[k++]=arr1[i++];
+				j++;
+			}
+			else if(arr1[i]<arr2[j])
+			{
+				arr3[k++]=arr1[i++];
+			}
+			else {
+				arr3[k++]=arr2[j++];
+			}
+		}
+		while(i<arr1.length)
+		{
+			arr3[k++]=arr1[i++];
+		}
+		while(j<arr2.length)
+		{
+			arr3[k++]=arr2[j++];
+		}
+		for(int value:arr3)
+		{
+			if(value!=0)
+			{
+				System.out.println(value + "");
+			}
+		}
+	}
+	
+	public static void intersectionArray(int arr1[], int arr2[]) {
+		int[] res = new int[(arr1.length+arr2.length)];
+		int k=0;
+		for(int i=0;i<arr1.length;i++) {
+			for(int j=0;j<arr2.length;j++) {
 				if(arr1[i]==arr2[j]) {
-					arr2[j]=-1;
-					count++;
+					res[k++]=arr2[j];
+					
 				}
 			}
 		}
+		
 	
-		int[] res=new int[arr3.length-count];
-		int k=0;
-		for(int i=0;i<arr3.length;i++) {
-			if(arr3[i]!=-1) {
-				res[k++]=arr3[i];
+		System.out.println(Arrays.toString(res));
+	}
+	
+public static void printDuplicateElements(int arr[]) {
+		
+		for(int i=0;i<arr.length;i++) {
+			for(int j=i+1;j<arr.length;j++) {
+				if(arr[i]==arr[j]) {
+				System.out.println(arr[j]);
+			
+				}			
+			}		
+		}	
+	}
+	
+	public static void removeDuplicates(int arr[]){
+		
+		for(int i=0;i<arr.length;i++) {
+			for(int j=i+1;j<arr.length;j++) {
+				if(arr[i]==arr[j]) {
+					arr[j] = -1;
+			
+				}			
 			}
+			
 		}
+	
+		int res[] = new int[arr.length];
+		int k=0;
+		for(int i=0;i<arr.length;i++) {
+			if(arr[i]!=-1){
+				res[k++] = arr[i];	
+				}	
+		}
+	
 		
 		System.out.println(Arrays.toString(res));
 		
 	}
 	
-	public static void pattern1() {
-	int n=1;
-		for(int i=1;i<=5;i++) {
-			n=1;
-			for(int j=1;j<=5;j++) {
-				
-				System.out.print(n++ + " ");
-			
-			}
-			System.out.println();
-		}
-	}
-	
-	public static void pattern2() {
-		int n=1;
-			for(int i=1;i<=5;i++) {
-
-				for(int j=1;j<=5;j++) {
-					
-					System.out.print(i + " ");
-				}
-				System.out.println();
-			}
-		}
-	
-	public static void pattern3() {
-		int n=1;
-			for(int i=1;i<=5;i++) {
-					int k=i;
-				for(int j=1;j<=i;j++) {
-					
-					System.out.print(k++ + " ");
-				}
-				System.out.println();
-			}
-	}
-	
-	public static void intersectionArray() {
+	public static void countPrime(int[] arr) {
 		
+		int primecount=0;
+		for(int i=0;i<arr.length;i++) {
+			int count=0;
+			for(int j=1;j<=arr[i];j++) {
+				if(arr[i]%j==0) {
+					count++;
+				}
+			}
+				
+		if(count==2) {
+			primecount++;
+		}
+		
+	}
+		System.out.println("prime count="+primecount);
+	}
+	
+	public static void occuranceArray(int arr[]) {
+		int freq[]=new int[arr.length];
+		for(int i=0;i<arr.length;i++) {
+			freq[i]=1;
+			for(int j=i+1;j<arr.length;j++) {
+				if(arr[i]==arr[j]) {
+					arr[j]=-1;
+					freq[i]++;
+			
+				}			
+			}		
+		}	
+		
+		for(int i=0;i<arr.length;i++) {
+			if(arr[i]!=-1) {
+			System.out.println(arr[i] + "======>" + freq[i]);
+		}
+		}
 	}
 	
 	public static void main(String[] args) {
@@ -284,11 +340,14 @@ public class ArrayOperations {
 //		System.out.println("max element is:"+ maxElement());
 		
 //		System.out.println("min element is:"+ minElement());
-		 unionArray(arr1,arr2);
+//		 unionArray(arr1,arr2);
+		intersectionArray(arr1,arr2);
 		
-//		pattern1();
-//		pattern2();
-//		pattern3();
+			int arr[] = {2,4,3,9,4,3,12,2,1};
+//			removeDuplicates(arr);
+//			printDuplicateElements(arr);
+//			countPrime(arr);
+//			occuranceArray(arr);
 		
 	}
 
