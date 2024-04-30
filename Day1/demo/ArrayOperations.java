@@ -273,9 +273,16 @@ public static void printDuplicateElements(int arr[]) {
 				res[k++] = arr[i];	
 				}	
 		}
+		int count = 0;
+		for (int i = 0;i<res.length;i++) {
+			if(res[i] != 0)
+				count++;
+		}
+		System.out.println("Remove Duplicate Array : ");
+		for (int i = 0; i < count; i++) {
+			System.out.println(res[i]);
+		}
 	
-		
-		System.out.println(Arrays.toString(res));
 		
 	}
 	
