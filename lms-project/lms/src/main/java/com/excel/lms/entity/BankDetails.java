@@ -3,12 +3,15 @@ package com.excel.lms.entity;
 import com.excel.lms.dto.technicalskillsdto.TechnicalSkillsDto;
 import com.excel.lms.enums.AccountType;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -35,4 +38,7 @@ public class BankDetails {
 	private String bankName;
 	private String ifscCode;
 	private String state;
+	
+	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	private EmployeePrimaryInfo employeePrimaryInfo;
 }
