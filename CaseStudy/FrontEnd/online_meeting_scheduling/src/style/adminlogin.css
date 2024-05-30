@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+   
+    height: 100vh;
+    width: 100%;
+  }
+  .admin{
+    background: linear-gradient(rgba(44, 44, 49, 0.7),rgba(8,0,58,0.7)),url('../../public/meeting2.jpeg');
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+  }
+  .adminlogin{
+    height: 400px;
+    width: 400px;
+    margin-right: 400px;
+  }
+  .input{
+    margin-left: 600px;
+    width: 300px;
+  }
+  .btn{
+    width: 300px;
+    margin-left:-100px;
+  }
+  .label{
+    margin-left: -100px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }

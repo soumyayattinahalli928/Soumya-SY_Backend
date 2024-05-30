@@ -1,0 +1,41 @@
+/* Admin Reg */
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+   
+    height: 100vh;
+    width: 100%;
+
+    
+  }
+  .reg{
+    background: linear-gradient(rgba(44, 44, 49, 0.7),rgba(8,0,58,0.7)),url('../../public/meeting1.jpeg');
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .regHeading{
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+  }
+  .adreg{
+    margin-left: 30%;
+  
+    height: 60vh;
+    width: 40%;
+  }
+  .form{
+    margin-left: 20%;
+  }
+  .adinput{
+    width: 300px!important;
+  }
+  .labelcolor{
+    color: white;
+  }

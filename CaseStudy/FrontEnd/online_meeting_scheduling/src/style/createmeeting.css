@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    height: 100vh;
+    width: 100%;
+  }
+  .desc-container{
+    background-color:blanchedalmond;
+    margin-top: 50px;
+    margin-right: 50px;
+   /* text-align: center; */
+    height: 70vh;
+    width: 35%;
+  }
+.lable{
+    margin-left: -100px;
+}
+.input{
+    margin-left: -100px;
+}
+  .meeting{
+    background:linear-gradient(rgba(8,0,58,0.7),rgba(8,0,58,0.7)), url('../../public/meeting1.jpeg');
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mh{
+    font-weight: bolder;
+    text-align: center;
+  }

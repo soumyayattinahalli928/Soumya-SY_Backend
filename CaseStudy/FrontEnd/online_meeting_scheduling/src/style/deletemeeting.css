@@ -1,0 +1,7 @@
+.delete{
+    display: flex;
+}
+.deletebtn{
+    width: 100px;
+    margin-left: 10px;
+}  

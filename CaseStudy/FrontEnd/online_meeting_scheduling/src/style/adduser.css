@@ -1,0 +1,59 @@
+.adduser{
+    background:linear-gradient(rgba(8,0,58,0.7),rgba(8,0,58,0.7)), url('../../public/m3.jpeg');
+    height: 100vh;
+    width: 100%;
+}
+.form-container {
+    background-color: cornsilk;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 30px auto;
+    margin-top: 150px;
+  }
+  
+  .form-title {
+    margin: 30px auto;
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    font-style: oblique;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-form {
+    margin-top: 20px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .form-title {
+      font-size: 1.5rem;
+      padding: 20px;
+    }
+  
+    .button-container {
+      justify-content: flex-start;
+    }
+  }
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  
+  .form-container {
+    animation: fadeIn 1s ease-in-out;
+  }
+    
